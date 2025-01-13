@@ -1,0 +1,13 @@
+# Week One Analysis Test Results
+
+## 1 Hour Time Frame 
+'2022-04-01 12:00:00' and '2022-04-01 13:00:00'
+
+        
+COLOR: [48:2::255:255:255m [49m "#FFFFFF" used 4 times
+COORDINATE:  "5,29" changed 4 times
+COLOR: [48:2::36:80:164m [49m "#2450A4" used 3 times
+COORDINATE:  "999,999" changed 1 times
+COLOR: [48:2::255:168:0m [49m "#FFA800" used 2 times
+COORDINATE:  "902,982" changed 1 times
+
