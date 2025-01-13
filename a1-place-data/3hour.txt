@@ -1,0 +1,15 @@
+INFO: argument entered main.py
+INFO: argument entered 1
+INFO: argument entered 12
+INFO: argument entered 3
+
+
+'2022-04-01 12:00:00' and '2022-04-01 15:00:00'
+
+        
+COLOR: [48:2::0:0:0m [49m "#000000" used 316225 times
+COORDINATE:  "0,0" changed 1483 times
+COLOR: [48:2::36:80:164m [49m "#2450A4" used 198392 times
+COORDINATE:  "999,999" changed 1206 times
+COLOR: [48:2::255:69:0m [49m "#FF4500" used 193183 times
+COORDINATE:  "859,766" changed 751 times
