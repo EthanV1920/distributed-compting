@@ -61,19 +61,28 @@ def main():
         limit 20;
     """
 
-    sample_sql = """
-        SELECT
-            count(DISTINCT user_id)
-        FROM
-            pixel_data;
+    sample_sql = f"""
+    select percentile_cont(0.5) WITHIN GROUP (ORDER BY value ) as p50,
+ percentile_cont(0.75) WITHIN
+GROUP (ORDER BY value ) as p75,
+    percentile_cont(0.9) WITHIN
+GROUP (ORDER BY value ) as p90,
+    percentile_cont(0.99) WITHIN
+GROUP (ORDER BY value ) as p99
+from (
+    select count (*) as value
+    from '../place-snappy.parquet' as file
+    where file.changed_at between '2022-04-0{day} {hour:02}:00:00' and '2022-04-0{day} {(hour + duration):02}:00:00'
+    group by user_int
+    ) balls;
     """
 
-    with duckdb.connect("duck_place.db") as con:
+    # con = duckdb.read_parquet("../place-snappy.parquet")
         # color_data = con.sql(color_sql).fetchone()
         # coord_data = con.sql(coordinate_sql).fetchone()
-        sample_data = con.sql(sample_sql).fetchone()
+    sample_data = duckdb.sql(sample_sql)
 
-        print(f"INFO: Sample SQL:\n{sample_data}")
+    print(f"INFO: Sample SQL:\n{sample_data}")
 
         # print(f"""
         # The most changed color was: {color_data[0]}
