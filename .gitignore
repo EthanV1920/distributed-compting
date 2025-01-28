@@ -126,3 +126,4 @@ dmypy.json
 # User files
 *.csv
 *.db
+*.parquet

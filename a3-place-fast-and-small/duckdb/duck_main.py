@@ -1,9 +1,9 @@
 """
 Filename: duck_main.py
 Author: Ethan Vosburg
-Date: January 14, 2025
+Date: January 27, 2025
 Version: 1.0
-Description: Using duckdb to do r/place analysis
+Description: Using duckdb to do more advanced r/place analysis
 """
 
 # Imports
@@ -61,18 +61,28 @@ def main():
         limit 20;
     """
 
+    sample_sql = """
+        SELECT
+            count(DISTINCT user_id)
+        FROM
+            pixel_data;
+    """
+
     with duckdb.connect("duck_place.db") as con:
-        color_data = con.sql(color_sql).fetchone()
-        coord_data = con.sql(coordinate_sql).fetchone()
+        # color_data = con.sql(color_sql).fetchone()
+        # coord_data = con.sql(coordinate_sql).fetchone()
+        sample_data = con.sql(sample_sql).fetchone()
 
-        print(f"""
-        The most changed color was: {color_data[0]}
-        which was changed {color_data[1]} times""")
+        print(f"INFO: Sample SQL:\n{sample_data}")
 
-        print(f"""
-        The most changed coordinate was {coord_data[1]}
-        Which was changed {coord_data[1]} times
-        """)
+        # print(f"""
+        # The most changed color was: {color_data[0]}
+        # which was changed {color_data[1]} times""")
+
+        # print(f"""
+        # The most changed coordinate was {coord_data[1]}
+        # Which was changed {coord_data[1]} times
+        # """)
 
 
 if __name__ == "__main__":

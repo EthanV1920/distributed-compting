@@ -13,13 +13,13 @@ import sqlite3 as sql
 
 
 def main():
-    number_args = len(sys.argv)
+    num_args = len(sys.argv)
     day = 0
     hour = 0
     duration = 0
 
     # Validate user input
-    for i in range(number_args):
+    for i in range(num_args):
         # print(f"INFO: argument entered {sys.argv[i]}")
         if i == 1:
             try:
