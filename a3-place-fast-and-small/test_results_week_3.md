@@ -1,13 +1,29 @@
-INFO: Sample SQL:
-┌────────┬────────┬────────┬────────┐
-│  p50   │  p75   │  p90   │  p99   │
-│ double │ double │ double │ double │
-├────────┼────────┼────────┼────────┤
-│    2.0 │    5.0 │   13.0 │   39.0 │
-└────────┴────────┴────────┴────────┘
+# Week 3 Results
 
+## Size of the Pre-Processed Data
+2.45 GB
 
-________________________________________________________
-Executed in  249.27 millis    fish           external
-   usr time  756.83 millis    0.05 millis  756.77 millis
-   sys time  125.50 millis    1.48 millis  124.01 millis
+## Timeframe
+2022-04-01 15 to 2022-04-01 21
+
+## Results
+COLOR RANK:
+    Rank1: black with 585973 users
+    Rank2: white with 449831 users
+    Rank3: orangered with 417631 users
+
+AVE SESSION LENGTH:
+    Session Len:     410.71 seconds
+
+PECENTILE DATA:
+    P50:          2 pixels
+    P75:          5 pixels
+    P90:         13 pixels
+    P99:         39 pixels
+
+FIRST TIME USERS:
+    First Time Users: 1065894
+
+## Runtime
+
+Executed in 1.10

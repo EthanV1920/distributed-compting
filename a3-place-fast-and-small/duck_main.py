@@ -130,8 +130,7 @@ SELECT first_users FROM first_time_users;
     print("COLOR RANK:")
     for i in range(3):
         color_data = color_rank_data.fetchone()
-        print(
-                f"    Rank{i + 1}: {webcolors.hex_to_name(color_data[0])} with {color_data[2]} users")
+        print(f"    Rank{i + 1}: {webcolors.hex_to_name(color_data[0])} with {color_data[2]} users")
     print("")
 
     # print(f"INFO: Sample SQL:\n{ave_session_len_data}")
@@ -143,10 +142,10 @@ SELECT first_users FROM first_time_users;
     print("")
     print("PECENTILE DATA:")
     percentile_data = percentile_data.fetchone()
-    print(f"    P50: {percentile_data[0]}")
-    print(f"    P75: {percentile_data[1]}")
-    print(f"    P90: {percentile_data[2]}")
-    print(f"    P99: {percentile_data[3]}")
+    print(f"    P50: {percentile_data[0]:10.0f} pixels")
+    print(f"    P75: {percentile_data[1]:10.0f} pixels")
+    print(f"    P90: {percentile_data[2]:10.0f} pixels")
+    print(f"    P99: {percentile_data[3]:10.0f} pixels")
     print("")
 
     # print(f"INFO: Sample SQL:\n{first_time_user_data}")
