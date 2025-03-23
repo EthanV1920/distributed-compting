@@ -127,3 +127,6 @@ dmypy.json
 *.csv
 *.db
 *.parquet
+*.zip
+
+.DS_Store
